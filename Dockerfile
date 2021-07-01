@@ -1,4 +1,4 @@
-FROM nextcloud:21.0.2-apache
+FROM nextcloud:apache
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update
 RUN apt-get install -y supervisor libmagickcore-6.q16-6-extra
