@@ -24,5 +24,6 @@ RUN echo '12 * * * * php /var/www/html/occ face:background_job' >> /var/spool/cr
 RUN echo '37 * * * * php /var/www/html/occ preview:pre-generate' >> /var/spool/cron/crontabs/www-data
 RUN apt-get remove -y git cmake
 RUN apt-get clean -y
-RUN rm -rf /var/lib/apt/lists/*
+RUN rm -rf /var/lib/apt/lists/* /dlib /usr/src/php/ext/pdlib
+WORKDIR /var/www/html
 CMD ["/usr/bin/supervisord", "-c", "/supervisord.conf"]
