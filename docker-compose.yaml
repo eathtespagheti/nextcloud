@@ -4,4 +4,4 @@ services:
   nextcloud:
     build: .
     command: tail -f /dev/null
-    image: eathtespagheti/nextcloud
+    image: eathtespagheti/nextcloud:24
